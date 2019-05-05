@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Load ROS Params -->
+  <rosparam file="$(find lane_line_detection)/params/params.yaml" command="load" ns="lane_line_detection"/>
+
+  <!-- Load Camera Calibration -->
+  <rosparam file="$(find lane_line_detection)/params/calibration.yaml" command="load" ns="lane_line_detection"/>
+
+  <!-- Lane Line Detection -->
+  <arg name="node_name" default="lane_line_detection"/>
+  <node pkg="lane_line_detection" type="$(arg node_name)_node" name="$(arg node_name)">
+    <param name="node_name" value="$(arg node_name)"/>
+  </node>
+
+</launch>

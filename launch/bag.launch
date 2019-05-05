@@ -1,0 +1,20 @@
+<launch>
+
+  <arg name="video_device" default=""/>
+  <arg name="bag_file_path" default="example.bag"/>
+  <arg name="bag_image_topic" default="/image_raw"/>
+  <arg name="bag_camera_info_topic" default="/camera_info"/>
+  <arg name="bag_rate" default="1.0"/>
+  <arg name="bag_start_time" default="0.0"/>
+  
+  <!-- Simulation Time -->
+  <param name="/use_sim_time" value="true"/>
+
+  <!-- Launch ROS Bag -->
+  <node pkg="rosbag" type="play" name="rosbag"
+    args="$(arg bag_file_path) --clock --rate=$(arg bag_rate) --start=$(arg bag_start_time) --loop --topic $(arg bag_image_topic)">
+    <remap from="$(arg bag_image_topic)" to="/lane_line_detection/image_raw"/>
+    <remap from="$(arg bag_camera_info_topic)" to="/lane_line_detection/camera_info"/>
+  </node>
+
+</launch>

@@ -1,0 +1,63 @@
+## ROS Topics Names
+# Subscribers
+image_sub_topic: image_raw
+camera_info_sub_topic: camera_info
+
+# Publishers
+image_pub_topic: processed_image
+lane_lines_topic: lane_lines
+lane_viz_topic: lane_viz
+
+# Frame IDs
+mount_frame_id: base_link
+camera_frame_id: camera
+
+# Timer Rates
+viz_rate_hz: 30
+
+## Lane Line Detection Params
+# Camera Input
+is_undistorted: true
+pixel_to_meter_ratio: 164.19
+use_dynamic_ratio: true
+
+# Region of Interest (ROI)
+roi_x0: 0
+roi_y0: 325
+roi_x1: 640
+roi_y1: 370
+
+# Yellow Bounds
+yellow_lower_r: 0
+yellow_lower_g: 230
+yellow_lower_b: 230
+yellow_upper_r: 0
+yellow_upper_g: 255
+yellow_upper_b: 255
+
+# White Bounds
+white_lower_r: 0
+white_lower_g: 73
+white_lower_b: 0
+white_upper_r: 255
+white_upper_g: 243
+white_upper_b: 65
+
+# Gaussian Blur
+size_m: 33
+size_n: 33
+sigma_x: 1.56
+sigma_y: 0
+
+# Canny Edge Detection
+thr_1: 50
+thr_2: 150
+aperture_size: 3
+l2_gradient: false
+
+# Hough Line Transform
+rho: 2
+theta: 0.0174
+threshold: 1
+min_line_length: 15
+max_line_gap: 5

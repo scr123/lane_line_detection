@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>lane_line_detection</name>
+
+  <version>1.0.0</version>
+
+  <description>Lane line detection package with a ROS interface</description>
+
+  <author email="sean.GH1231@gmail.com">Sean Crutchlow</author>
+  <maintainer email="sean.GH1231@gmail.com">Sean Crutchlow</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rviz_visual_tools</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>dynamic_reconfigure</depend>
+
+</package>
