@@ -7,17 +7,18 @@ find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)
 
 find_package(catkin REQUIRED COMPONENTS
-	roscpp
-	message_generation
+  roscpp
+  message_generation
   std_msgs
-	sensor_msgs
+  sensor_msgs
   geometry_msgs
   visualization_msgs
-  rviz_visual_tools
-	cv_bridge
-	image_transport
-  robot_state_publisher
+  cv_bridge
   dynamic_reconfigure
+  image_transport
+  robot_state_publisher
+  rviz_visual_tools
+  uvc_camera
 )
 
 add_message_files(

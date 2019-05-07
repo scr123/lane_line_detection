@@ -19,9 +19,11 @@
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
-  <depend>rviz_visual_tools</depend>
+  <depend>dynamic_reconfigure</depend>
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
-  <depend>dynamic_reconfigure</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz_visual_tools</depend>
+  <depend>uvc_camera</depend>
 
 </package>
